@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: 682263059097.dkr.ecr.us-east-1.amazonaws.com/transaction_service
+    container_name: transaction_service
+    ports:
+      - "8003:8003"
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      KAFKA_PRODUCER_BOOTSTRAP-SERVERS: kafka:9092
+      KAFKA_PRODUCER_KEY-SERIALIZER: org.apache.kafka.common.serialization.StringSerializer
+      KAFKA_PRODUCER_VALUE-SERIALIZER: org.apache.kafka.common.serialization.StringSerializer
+    networks:
+      - custservice_imnetwork
+networks:
+  custservice_imnetwork:
+    external: true

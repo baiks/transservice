@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Transaction Service API
+  profiles:
+    active: h2
+server:
+  port: 8003
+
