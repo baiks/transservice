@@ -45,7 +45,3 @@ To access the APIs, open the link http://localhost:8003/swagger-ui
 ```
 
 ![image](img.png)
-
-```sh
-You can create your own user on swagger by invoking the end point /auth/signup.
-```
