@@ -30,7 +30,7 @@ spring:
     
     For mysql remember to change the database configurations below
     
-    `url: jdbc:mysql://127.0.0.1:3306/cards?createDatabaseIfNotExist=true`
+    `url: jdbc:mysql://127.0.0.1:3306/interview_im?createDatabaseIfNotExist=true`
     `username: root`
     `password: Baiks@123`
 ```
@@ -41,7 +41,7 @@ spring:
 - Run the project using IDE. You expect the code to run successfully. Alternatively you can run the command docker-compose up -d`
 ## Access the APIs
 ```sh
-To access the APIs, open the link http://localhost:8001/swagger-ui
+To access the APIs, open the link http://localhost:8003/swagger-ui
 ```
 
 ![image](img.png)
