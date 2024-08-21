@@ -1,6 +1,7 @@
 version: '3.8'
+
 services:
-  backend:
+  transaction_service:
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,6 +10,14 @@ services:
     ports:
       - "8003:8003"
     environment:
+      SPRING_PROFILES_ACTIVE: mysql
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/interview_im?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: baiks
+      SPRING_DATASOURCE_PASSWORD: Baiks@123
+      SPRING_DATASOURCE_HIKARI_AUTOCOMMIT: "true"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
       KAFKA_PRODUCER_BOOTSTRAP_SERVERS: kafka:9092
       KAFKA_PRODUCER_KEY_SERIALIZER: org.apache.kafka.common.serialization.StringSerializer
