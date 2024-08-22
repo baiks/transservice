@@ -39,7 +39,7 @@ public class TransactionController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/withdrawal/{customerId}")
-    @Operation(summary = "Deposit transaction", description = "Returns the transaction status.\n" + "\n" + "Example Requests:\n" + "{\n" +
+    @Operation(summary = "Withdrawal transaction", description = "Returns the transaction status.\n" + "\n" + "Example Requests:\n" + "{\n" +
             "  \"customerId\": 0,\n" +
             "  \"accountFrom\": \"0000000001\",\n" +
             "  \"accountTo\": \"string\",\n" +
@@ -52,7 +52,7 @@ public class TransactionController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/transfer/{customerId}")
-    @Operation(summary = "Deposit transaction", description = "Returns the transaction status.\n" + "\n" + "Example Requests:\n" + "{\n" +
+    @Operation(summary = "Transfer transaction", description = "Returns the transaction status.\n" + "\n" + "Example Requests:\n" + "{\n" +
             "  \"customerId\": 0,\n" +
             "  \"accountFrom\": \"0000000001\",\n" +
             "  \"accountTo\": \"string\",\n" +

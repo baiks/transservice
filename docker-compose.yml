@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  transaction_service:
+  transaction-service:
     build:
       context: .
       dockerfile: Dockerfile
-    image: 682263059097.dkr.ecr.us-east-1.amazonaws.com/transaction_service
-    container_name: transaction_service
+    image: 682263059097.dkr.ecr.us-east-1.amazonaws.com/transaction-service
+    container_name: transaction-service
     ports:
       - "8003:8003"
     environment:
